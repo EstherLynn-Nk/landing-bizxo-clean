@@ -196,7 +196,8 @@ export default {
   <section class="services-section">
     <h2 class="section-title">Nos Services</h2>
     <div class="services-grid">
-      <div v-for="(service, index) in services" :key="index" class="service-card">
+      <div v-for="(service, index) in services" :key="index" class="service-card fade-slide"
+      :style="{transitionDelay :  `${index * 0.2}s`}">
         <img :src="service.image" :alt="service.title" class="service-image" />
         <h3 class="service-title">{{ service.title }}</h3>
         <p class="service-description">{{ service.description }}</p>
@@ -209,6 +210,11 @@ export default {
 import generalImage from '@/assets/GeneralManagement.jpg';
 import boardImage from '@/assets/BoardAdvisory.jpg';
 import infoImage from '@/assets/InformationManagement.jpg';
+
+
+
+
+
 
 export default {
   name: 'ServicesSection',
@@ -236,6 +242,23 @@ export default {
       ],
     };
   },
+  mounted() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  const elements = this.$el.querySelectorAll('.fade-slide');
+  elements.forEach((el) => observer.observe(el));
+}
+
+
 };
 </script>
 
@@ -292,4 +315,17 @@ export default {
   font-size: 0.95rem;
   color: #555;
 }
+/* Animation du CSS */
+.fade-slide {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-slide.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 </style>
