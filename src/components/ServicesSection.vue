@@ -197,7 +197,7 @@ export default {
     <h2 class="section-title">Nos Services</h2>
     <div class="services-grid">
       <div v-for="(service, index) in services" :key="index" class="service-card fade-slide"
-      :style="{transitionDelay :  `${index * 0.2}s`}">
+      :style="{transitionDelay :  `${index * 0.8}s`}">
         <img :src="service.image" :alt="service.title" class="service-image" />
         <h3 class="service-title">{{ service.title }}</h3>
         <p class="service-description">{{ service.description }}</p>
@@ -265,14 +265,14 @@ export default {
 <style scoped>
 .services-section {
   padding: 4rem 2rem;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   text-align: center;
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
-  color: #222;
+  color: #111010;
 }
 
 .services-grid {
@@ -283,7 +283,7 @@ export default {
 }
 
 .service-card {
-  background-color: white;
+  background-color: rgb(196, 188, 188);
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   padding: 1.5rem;
@@ -308,12 +308,12 @@ export default {
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #111;
+  color: #000000;
 }
 
 .service-description {
   font-size: 0.95rem;
-  color: #555;
+  color: #000000;
 }
 /* Animation du CSS */
 .fade-slide {
