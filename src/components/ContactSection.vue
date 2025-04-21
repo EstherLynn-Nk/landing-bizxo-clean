@@ -1,6 +1,6 @@
 
 <!-- src/components/ContactForm.vue -->
-<template>
+<!-- <template>
   <section class="contact-form-section">
     <div class="form-container">
       <h2>Contactez-nous</h2>
@@ -114,6 +114,161 @@ button {
 }
 
 button:hover {
+  background-color: #333;
+}
+</style> -->
+<template>
+  <section class="contact-intro">
+    <h2 class="contact-title">Let’s work together</h2>
+    <p class="contact-subtitle">
+      Ready to bridge the gap? Reach out to explore how BizXO can support your goals.
+    </p>
+  </section>
+
+  <section class="contact-form-section">
+    <form class="contact-form" @submit.prevent="submitForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input id="name" v-model="form.name" type="text" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input id="email" v-model="form.email" type="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" v-model="form.message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-button">Send Message</button>
+    </form>
+  </section>
+</template>
+
+<script>
+export default {
+  name: "Contact",
+  data() {
+    return {
+      form: {
+        name: "",
+        email: "",
+        message: ""
+      }
+    };
+  },
+  methods: {
+    submitForm() {
+      // You can connect this to an API later
+      console.log("Form submitted:", this.form);
+      alert("Message sent! We'll be in touch soon.");
+      // Reset form
+      this.form.name = "";
+      this.form.email = "";
+      this.form.message = "";
+    }
+  }
+};
+</script>
+
+<style scoped>
+/* Gradient intro section */
+.contact-intro {
+  background: linear-gradient(-45deg, #111, #333, #777, #ccc);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  padding: 6rem 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Contact form */
+.contact-form-section {
+  padding: 4rem 2rem;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #111;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #999;
+  background-color: #fafafa;
+}
+
+.submit-button {
+  background-color: #111;
+  color: white;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
   background-color: #333;
 }
 </style>

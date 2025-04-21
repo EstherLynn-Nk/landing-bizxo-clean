@@ -525,11 +525,12 @@ export default {
   <section class="services-section" ref="section">
     
     <div class="intro-block">
+      <h1>Our services</h1>
      
       <div class="intro-overlay">
         
         <h2 class="intro-title">
-          <p class="section_number">Our services </p>
+         
           <span class="typewriter-wrapper">
             <span class="typewriter" v-html="highlightedIntro"></span>
           </span>
@@ -569,7 +570,7 @@ export default {
     return {
       introText: '',
       highlightedIntro: '',
-      fullIntroText: 'Des services conçus pour propulser vos décisions stratégiques',
+      fullIntroText: 'At BizXO, we offer sharp, executive-level support across three essential service areas — built to move organizations forward',
       highlightTarget: 'propulser',
       services: [
         {
@@ -651,12 +652,13 @@ color: #777777;
 }
 
 .intro-block {
-  background: linear-gradient(-45deg, #000000, #333333, #777777);
+  background: linear-gradient(-45deg, #8d8787, #343232,#474242);
   background-size: 400% 400%;
   animation: gradientShift 10s ease infinite;
   color: #fff;
   padding: 4rem 2rem;
   text-align: center;
+  
 }
 
 @keyframes gradientShift {
@@ -689,12 +691,13 @@ color: #777777;
   max-width: 100%;
   word-wrap: break-word;
   white-space: normal;
+  font-size: 1.5rem;
 }
 
 .typewriter {
   display: inline;
   border-right: 2px solid white;
-  animation: blink-caret 0.75s step-end infinite;
+  animation: blink-caret 0.5s step-end infinite;
 }
 
 @keyframes blink-caret {
