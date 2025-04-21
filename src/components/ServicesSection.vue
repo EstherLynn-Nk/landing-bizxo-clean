@@ -523,9 +523,13 @@ export default {
 </style> -->
 <template>
   <section class="services-section" ref="section">
+    
     <div class="intro-block">
+     
       <div class="intro-overlay">
+        
         <h2 class="intro-title">
+          <p class="section_number">Our services </p>
           <span class="typewriter-wrapper">
             <span class="typewriter" v-html="highlightedIntro"></span>
           </span>
@@ -633,18 +637,25 @@ export default {
 </script>
 
 <style scoped>
+h1{
+  text-align: center;
+}
 .services-section {
   padding: 0;
   background-color: #fff;
   text-align: center;
 }
+.section_number{
+  background-color: #fff;
+color: #777777;
+}
 
 .intro-block {
-  background: linear-gradient(-45deg, #000000, #333333, #777777, #cccccc);
+  background: linear-gradient(-45deg, #000000, #333333, #777777);
   background-size: 400% 400%;
   animation: gradientShift 10s ease infinite;
   color: #fff;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
