@@ -656,7 +656,7 @@ color: #777777;
   background-size: 400% 400%;
   animation: gradientShift 10s ease infinite;
   color: #fff;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   text-align: center;
   
 }

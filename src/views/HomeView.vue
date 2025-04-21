@@ -46,6 +46,9 @@ export default {
     <HeroSection />
     <ServicesSection/>
     <ContactSection/>
+    <Globe/>
+  
+
   </div>
 </template>
 
@@ -53,12 +56,17 @@ export default {
 import HeroSection from '@/components/HeroSection.vue'
 import ServicesSection from '@/components/ServicesSection.vue'
 import ContactSection from '@/components/ContactSection.vue'
+import Globe from '@/components/Globe.vue';
+
+
 export default {
   name: 'HomeView',
   components: {
     HeroSection,
     ServicesSection,
-    ContactSection
+    ContactSection,
+    Globe
+    
   }
 }
 </script>
