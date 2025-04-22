@@ -4,4 +4,6 @@ import App from './App.vue'
 import router from './router'
 import 'three/examples/jsm/controls/OrbitControls';
 
+
+
 createApp(App).use(router).mount('#app')
