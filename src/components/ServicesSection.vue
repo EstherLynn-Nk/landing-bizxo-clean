@@ -123,7 +123,7 @@ export default {
   width: 80px;
   background: #aaa;
   margin: 0 auto 1.5rem;
-  animation: growLine 1s ease-out forwards;
+  animation: growLine 0.5s ease-out forwards;
 }
 
 @keyframes growLine {
