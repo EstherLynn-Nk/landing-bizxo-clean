@@ -178,7 +178,7 @@ export default {
 }
 
 .service-card {
-  background-color: #d7d7d7;
+  background-color: #f3f0ed;;
   border-radius: 1rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   padding: 2rem;
