@@ -47,6 +47,8 @@ export default {
     <ServicesSection/>
     <ContactSection/>
     <WhereAreWe/>
+    <Footer/>
+  
   
 
   </div>
@@ -56,7 +58,8 @@ export default {
 import HeroSection from '@/components/HeroSection.vue'
 import ServicesSection from '@/components/ServicesSection.vue'
 import ContactSection from '@/components/ContactSection.vue'
-import WhereAreWe from '../components/WhereAreWe.vue';
+import WhereAreWe from '@/components/WhereAreWe.vue';
+import Footer from '@/components/Footer.vue';
 
 
 
@@ -67,7 +70,8 @@ export default {
     HeroSection,
     ServicesSection,
     ContactSection,
-    WhereAreWe
+    WhereAreWe,
+    Footer
     
     
   }
