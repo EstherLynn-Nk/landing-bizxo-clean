@@ -2,7 +2,7 @@
   <section class="contact-modern-section">
     <!-- TITRE -->
     <div class="contact-header">
-      <div class="section-number">02</div>
+      <div class="section-number">03.</div>
       <h2 class="contact-title">
         <span class="underline">Let’s work together</span>
       </h2>

@@ -1,6 +1,7 @@
 <template>
   <section class="where-we-are">
     <div class="header">
+      <div class="section-number">02.</div>
       <h2 ref="titleRef" class="title fade-in"><span class="underline-text">Our Global Footprint</span> </h2>
       <p ref="typedSubtitle" class="subtitle typewriter-text"></p>
     </div>
@@ -169,6 +170,13 @@ export default {
 @keyframes underline-shine {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
+}
+.section-number {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #e9dfdf;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
 }
 
 </style>
