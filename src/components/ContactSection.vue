@@ -22,7 +22,7 @@
     <div class="contact-form-container">
       <form class="smart-form" @submit.prevent="handleSubmit">
         <div v-if="step === 1" class="form-step step-box">
-          <h3>Step 1: Full Name</h3>
+         
           <div class="form-content">
             <label for="name">Full Name</label>
             <input id="name" v-model="form.name" type="text" required />
@@ -31,7 +31,7 @@
         </div>
 
         <div v-if="step === 2" class="form-step step-box">
-          <h3>Step 2: Email Address</h3>
+         
           <div class="form-content">
             <label for="email">Email Address</label>
             <input id="email" v-model="form.email" type="email" required />
@@ -41,7 +41,7 @@
         </div>
 
         <div v-if="step === 3" class="form-step step-box">
-          <h3>Step 3: Message</h3>
+         
           <div class="form-content">
             <label for="message">Message</label>
             <textarea id="message" v-model="form.message" rows="5" required></textarea>
@@ -175,7 +175,7 @@ export default {
 }
 
 .contact-form-container {
-  max-width: 600px;
+  max-width: 400px;
   margin: auto;
   position: relative;
   z-index: 2;

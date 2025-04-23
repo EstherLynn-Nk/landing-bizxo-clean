@@ -28,7 +28,8 @@
           { id: "home", label: "Home" },
           { id: "services", label: "Services" },
           { id: "location", label: "Where We Are" },
-          { id: "contact", label: "Contact" }
+          { id: "contact", label: "Contact" },
+          { id: "about", label: "About" },
         ]
       };
     },

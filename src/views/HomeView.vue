@@ -103,6 +103,9 @@ export default {
     <section id="contact">
       <ContactSection />
     </section>
+    <section id="about">
+      <AboutUsSection />
+    </section>
 
     <Footer/>
 
@@ -120,6 +123,7 @@ import WhereAreWe from '@/components/WhereAreWe.vue';
 import Footer from '@/components/Footer.vue';
 import Menu from '@/components/Menu.vue';
 import MenuPage from '@/components/MenuPage.vue';
+import AboutUsSection from '@/components/AboutUsSection.vue';
 
 
 
@@ -133,6 +137,7 @@ export default {
     ServicesSection,
     ContactSection,
     WhereAreWe,
+    AboutUsSection,
     Footer
     
     
