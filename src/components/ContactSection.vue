@@ -176,7 +176,7 @@ export default {
 <style scoped>
 /* Gradient intro section */
 .contact-intro {
-  background: linear-gradient(-45deg, #111, #333, #777, #ccc);
+  background: linear-gradient( #777, #ffffff);
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
   padding: 6rem 2rem;
