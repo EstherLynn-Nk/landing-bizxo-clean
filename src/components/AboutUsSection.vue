@@ -1,5 +1,6 @@
 <template>
   <section class="about-section">
+    <div class="section-number">04.</div>
     <!-- MOT À LA FOIS -->
     <div class="word-zone">
       <transition name="fade-word" mode="out-in">
@@ -178,6 +179,12 @@ export default {
   100% {
     transform: rotate(360deg);
   }
+}
+.section-number {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 1s ease forwards;
 }
 
 </style>

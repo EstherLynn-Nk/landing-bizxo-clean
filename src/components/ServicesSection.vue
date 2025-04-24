@@ -44,19 +44,19 @@ export default {
           title: 'General Management',
           image: generalImage,
           tag: 'Leadership',
-          description: 'Strategic supervision, leadership and high-level operations management.'
+          description: 'Our Fractional General Managers are seasoned executives who provide strategic leadership and operational excellence to guide organizations through transitions and growth. Whether for interim needs or ongoing support, they help navigate challenges and drive sustainable success.'
         },
         {
           title: 'Board Advisory Governance',
           image: boardImage,
           tag: 'Governance',
-          description: 'Guidance for boards to make sound decisions and drive strong governance.'
+          description: 'We provide independent board advisory and strategic oversight to help companies strengthen governance, manage risk, and scale with confidence. Our seasoned experts bring deep experience in compliance, corporate strategy, and investor relations to support sustainable growth.'
         },
         {
           title: 'Information Management',
           image: infoImage,
           tag: 'Clarity',
-          description: 'Data organization, security, and insights for smarter decisions.'
+          description: 'In today’s digital age, having the right strategy to manage information assets. Our fractional CIO and CISO services provide you with experienced IT leadership to drive innovation, optimize technology investments, and enhance your capabilities without the cost of a full-time executive.'
         }
       ]
     };

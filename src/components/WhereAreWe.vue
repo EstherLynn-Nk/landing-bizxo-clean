@@ -20,7 +20,7 @@ export default {
   setup() {
     const titleRef = ref(null);
     const typedSubtitle = ref(null);
-    const subtitleText = "BizXO supports global leadership and transformation initiatives across 4 key regions.";
+    const subtitleText = "BizXO supports global leadership and transformation initiatives across diverse strategic regions.";
     let hasTyped = false;
 
     const typeWriter = () => {

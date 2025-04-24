@@ -3,8 +3,9 @@
       <button class="close-btn" @click="$emit('close')">✕</button>
       <ul class="menu-list">
         <li
-          v-for="item in navItems"
+          v-for="(item, index) in navItems"
           :key="item.id"
+          :style="`--i: ${index}`"
           @click="goToSection(item.id)"
         >
           {{ item.label }}
@@ -27,7 +28,7 @@
         navItems: [
           { id: "home", label: "Home" },
           { id: "services", label: "Services" },
-          { id: "location", label: "Where We Are" },
+          { id: "location", label: "Our Footprint" },
           { id: "contact", label: "Contact" },
           { id: "about", label: "About" },
         ]
@@ -58,7 +59,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.4s ease;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   .menu-list {
@@ -69,16 +81,27 @@
   }
   
   .menu-list li {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     color: white;
     font-weight: bold;
     margin: 2rem 0;
     cursor: pointer;
-    transition: color 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideIn 0.6s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
   }
   
   .menu-list li:hover {
     color: #e0cba8;
+    text-shadow: 0 0 10px rgba(224, 203, 168, 0.6);
+  }
+  
+  @keyframes fadeSlideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   .close-btn {
@@ -87,9 +110,14 @@
     right: 2rem;
     background: transparent;
     border: none;
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: white;
     cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    transform: rotate(90deg);
   }
   </style>
   
