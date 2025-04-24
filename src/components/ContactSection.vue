@@ -4,10 +4,10 @@
     <div class="contact-header">
       <div class="section-number">03.</div>
       <h2 class="contact-title">
-        <span class="underline">Let’s work together</span>
+        <span class="underline">Get in touch </span>
       </h2>
       <p class="contact-subtitle">
-        Ready to bridge the gap? Reach out and see how BizXO can support your next big step.
+        Wondering how we can help? Start the conversation — and let’s explore solutions.
       </p>
     </div>
 

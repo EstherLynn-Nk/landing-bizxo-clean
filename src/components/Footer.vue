@@ -1,7 +1,7 @@
 <template>
     <footer class="bizxo-footer">
       <div class="footer-links">
-        <router-link to="/">Accueil</router-link>
+        <router-link to="/">Home</router-link>
         <router-link to="/services">Services</router-link>
         <router-link to="/contact">Contact</router-link>
         <router-link to="/where-we-are">Where we are</router-link>

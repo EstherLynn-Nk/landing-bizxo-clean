@@ -21,6 +21,14 @@
           We understand that every organization has unique needs, and our tailored approach ensures you receive the precise support necessary
           to achieve your goals and reap the benefits for your organization.
         </p>
+        <div class="hourglass-wrapper">
+  <div class="hourglass"></div>
+  <p class="coming-text">
+    Our website is under construction — the full BizXO experience is coming soon.
+  </p>
+</div>
+
+      
       </div>
     </div>
   </section>
@@ -109,4 +117,67 @@ export default {
   color: #ddd;
   text-align: center;
 }
+.hourglass-wrapper {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.coming-text {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* SABLIER */
+.hourglass {
+  width: 40px;
+  height: 60px;
+  border: 4px solid #e0cba8;
+  border-radius: 4px;
+  position: relative;
+  animation: flip 2s infinite ease-in-out;
+  box-sizing: border-box;
+}
+
+.hourglass::before,
+.hourglass::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-color: #e0cba8 transparent;
+}
+
+.hourglass::before {
+  top: 8px;
+  border-width: 12px 10px 0 10px;
+}
+
+.hourglass::after {
+  bottom: 8px;
+  border-width: 0 10px 12px 10px;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 </style>

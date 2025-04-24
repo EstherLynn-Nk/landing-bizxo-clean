@@ -14,7 +14,7 @@
       <p class="hero-slogan">Fractional Management Services : We fill the gap !</p>
 
     </div>
-    <div class="coming-soon spaced right-align"> ** Notre site complet arrive très bientôt. Restez connectés !</div>
+    
   </section>
 </template>
 
@@ -83,16 +83,7 @@ export default {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 } */
 
-.coming-soon {
-  font-size: 0.8rem;
-  font-style: italic;
-  color: #f8f8f8;
- 
-  padding: 10px 20px;
-  border-radius: 8px;
-  display: inline-block;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+
 
 
   .hero-logo {
