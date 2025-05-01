@@ -44,7 +44,7 @@ export default {
 
 .hero {
   position: relative;
-  width: 100vw;
+  width: auto;
   height: 100vh;
   margin: 0;
   padding: 0;
