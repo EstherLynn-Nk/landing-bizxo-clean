@@ -1,8 +1,8 @@
 
 <template>
   <section class="hero">
-    <video autoplay muted loop class="hero-video">
-      <source src="/couverture.mp4" type="video/mp4" />
+    <video autoplay muted loop playsinline preload="auto" poster= "/src/assets/poster.jpg"class="hero-video">
+      <source src="/Couverture.light.mp4" type="video/mp4" />
       Votre navigateur ne supporte pas la vidéo.
     </video>
 
@@ -19,9 +19,24 @@
 </template>
 
 <script>
+
+import { onMounted } from 'vue';
+
 export default {
-  name: 'HeroSection'
-}
+  name: 'HeroSection',
+  setup() {
+    /* modifications performances */
+    onMounted(() => {
+      const logo = document.querySelector('.hero-logo');
+      if (logo) {
+        setTimeout(() => {
+          logo.classList.add('after-load');
+        }, 2200); // après le LCP (2,2 sec)
+      }
+    });
+  }
+};
+
 </script>
 
 <style scoped>
@@ -45,7 +60,7 @@ export default {
 .hero {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -64,7 +79,7 @@ export default {
   object-fit: cover;
   z-index: 0;
   opacity: 0.6;
-  filter: grayscale(100%) opacity(10);
+  filter: grayscale(100%) ;
 }
 
 .hero-content {
@@ -96,14 +111,19 @@ export default {
   line-height: 1.1;
 }
 
-
-
 .hero-logo span {
+  display: inline-block;
+  opacity: 1;
+  transform: none;
+}
+
+
+/* .hero-logo span {
   display: inline-block;
   opacity: 0;
   transform: translateY(20px);
   animation: logoFadeIn 0.6s forwards;
-}
+} */
 
 .hero-logo span:nth-child(1) { animation-delay: 0.2s; }
 .hero-logo span:nth-child(2) { animation-delay: 0.4s; }
@@ -132,6 +152,22 @@ export default {
     opacity: 1;
   }
 }
+
+/* modifications performances */
+
+
+.hero-logo.after-load {
+  animation: pulse 1.8s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+
+
 
 </style>
 
