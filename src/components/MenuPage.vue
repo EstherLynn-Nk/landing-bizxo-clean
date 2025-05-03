@@ -5,7 +5,7 @@
   <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
   <ul class="menu">
       <li><a class="active" href="#home">Home</a></li>
-      <li><a href="#news">News</a></li>
+      <li><a href="#service">Services</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#about">About</a></li>
   </ul>
@@ -15,22 +15,22 @@
 <script>
 
 export default {
-name: "Header",
-methods: {
-  updatemenu()  {
-    const menuBtn = document.getElementById('menu-btn');
-    const menu = document.querySelector('.menu');
-    if (menuBtn.checked) {
-      menu.style.borderBottomRightRadius = '0';
-      menu.style.borderBottomLeftRadius = '0';
-    } else {
-      menu.style.borderRadius = '16px';
+  name: "Header",
+  methods: {
+    updatemenu()  {
+      const menuBtn = document.getElementById('menu-btn');
+      const menu = document.querySelector('.menu');
+      if (menuBtn.checked) {
+        menu.style.borderBottomRightRadius = '0';
+        menu.style.borderBottomLeftRadius = '0';
+      } else {
+        menu.style.borderRadius = '16px';
+      }
     }
+  },
+  mounted() {
+    // JavaScript here
   }
-},
-mounted() {
-  // JavaScript here
-}
 }
 
 </script>
