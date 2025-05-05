@@ -62,7 +62,7 @@
   .dot-nav {
     position: fixed;
     top: 50%;
-    left: 2rem;
+    left: 0.2rem;
     transform: translateY(-50%);
     z-index: 999;
   }
@@ -70,17 +70,20 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1rem;
     padding: 0;
     margin: 0;
   }
   .dot-nav button {
-    width: 11px;
-    height: 2px;
-    border: none;
-    
     background-color: #aaa;
     position: relative;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    font-size: 31px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
@@ -99,7 +102,8 @@
   transform: translateY(-50%) translateX(0);
   background: rgba(255, 255, 255, 0.95);
   color: #111;
-  padding: 6px 12px;
+  padding: 12px;
+  margin: 6px 12px;
   border-radius: 4px;
   font-size: 0.75rem;
   font-weight: 500;
@@ -109,6 +113,11 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+}
+@media (max-width: 768px) {
+  .dot-nav{
+    display: none;
+  }
 }
 
 .dot-nav button:hover .tooltip {

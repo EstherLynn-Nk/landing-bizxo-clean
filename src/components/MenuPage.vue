@@ -1,123 +1,183 @@
 <template>
-    <div class="overlay" v-if="visible">
-      <button class="close-btn" @click="$emit('close')">✕</button>
-      <ul class="menu-list">
-        <li
-          v-for="(item, index) in navItems"
-          :key="item.id"
-          :style="`--i: ${index}`"
-          @click="goToSection(item.id)"
-        >
-          {{ item.label }}
-        </li>
-      </ul>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    name: "MenuOverlay",
-    props: {
-      visible: {
-        type: Boolean,
-        default: false
-      }
-    },
-    data() {
-      return {
-        navItems: [
-          { id: "home", label: "Home" },
-          { id: "services", label: "Services" },
-          { id: "location", label: "Our Footprint" },
-          { id: "contact", label: "Contact" },
-          { id: "about", label: "About" },
-        ]
-      };
-    },
-    methods: {
-      goToSection(id) {
-        const el = document.getElementById(id);
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-          this.$emit("close");
-        }
+  <div class="header">
+  <a href="#" class="logo">BixZo</a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#service">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+  </ul>
+  </div>
+</template>
+
+<script>
+
+export default {
+  name: "Header",
+  methods: {
+    updatemenu()  {
+      const menuBtn = document.getElementById('menu-btn');
+      const menu = document.querySelector('.menu');
+      if (menuBtn.checked) {
+        menu.style.borderBottomRightRadius = '0';
+        menu.style.borderBottomLeftRadius = '0';
+      } else {
+        menu.style.borderRadius = '16px';
       }
     }
-  };
-  </script>
-  
-  <style scoped>
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: #000;
-    z-index: 2000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: fadeInUp 0.6s ease-out forwards;
+  },
+  mounted() {
+    // JavaScript here
   }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .menu-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  
-  .menu-list li {
-    font-size: 2.7rem;
-    color: white;
-    font-weight: bold;
-    margin: 2rem 0;
-    cursor: pointer;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeSlideIn 0.6s ease forwards;
-    animation-delay: calc(0.2s * var(--i));
-  }
-  
-  .menu-list li:hover {
-    color: #e0cba8;
-    text-shadow: 0 0 10px rgba(224, 203, 168, 0.6);
-  }
-  
-  @keyframes fadeSlideIn {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .close-btn {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    background: transparent;
-    border: none;
-    font-size: 2.2rem;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .close-btn:hover {
-    transform: rotate(90deg);
-  }
-  </style>
-  
+}
+
+</script>
+
+
+<style>
+
+.header {
+background-color: #000;
+box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+position: fixed;
+width: 100%;
+z-index: 3;
+}
+
+.header ul {
+margin: 0;
+padding: 0;
+list-style: none;
+overflow: hidden;
+}
+
+.header li a {
+display: block;
+padding: 14px 16px;
+text-decoration: none;
+color: #fff;
+}
+
+.header li a:hover,
+.header .menu-btn:checked ~ .menu li a:hover {
+  color:#000;
+  background-color: #fff;
+}
+
+.header .logo {
+display: block;
+float: left;
+font-size: 2em;
+padding: 10px 20px;
+text-decoration: none;
+color: #fff;
+}
+
+/* menu */
+
+.header .menu {
+clear: both;
+max-height: 0;
+background-color: #000;
+transition: background-color 0.3s ease;
+transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+cursor: pointer;
+float: right;
+background-color: transparent;
+padding: 28px 20px;
+position: relative;
+user-select: none;
+}
+
+
+.header .menu-icon .navicon {
+background: #fff;
+display: block;
+height: 2px;
+position: relative;
+transition: background .2s ease-out;
+width: 18px;
+background-color: black;
+transition: background-color 0.3s ease;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+background: #fff;
+content: '';
+display: block;
+height: 100%;
+transition: all 0.3s ease;
+position: absolute;
+transition: all .2s ease-out;
+width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+top: -5px;
+}
+
+.header .menu-icon .navicon,.header .menu-icon .navicon:before,.header .menu-icon .navicon:after {
+  background-color: #fff;
+}
+
+/* menu btn */
+
+
+
+.header .menu-btn {
+display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+background-color: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 600px) {
+.header li {
+  float: left;
+}
+.header li a {
+  padding: 20px 30px;
+}
+.header .menu {
+  padding-right: 1,5rem;
+  clear: none;
+  float: right;
+  max-height: none;
+}
+.header .menu-icon {
+  display: none;
+}
+}
+</style>

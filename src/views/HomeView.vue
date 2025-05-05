@@ -16,12 +16,6 @@ export default {
 </script>
 
 
-
-
-
-
-
-
 <!-landing-vue/
 ├── public/
 ├── src/
@@ -83,7 +77,7 @@ export default {
 
 <template>
   <div>
-    <button class="menu-toggle" @click="showOverlay = true">Menu</button>
+    
 
     <MenuPage :visible="showOverlay" @close="showOverlay = false" />
   
@@ -148,23 +142,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-.menu-toggle {
-  position: fixed;
-  top: 1.5rem;
-  right: 2rem;
-  z-index: 2100;
-  background: #e0cba8;
-  color: #111;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.menu-toggle:hover {
-  background: #fff;
-}
-</style>
