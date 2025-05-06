@@ -1,7 +1,7 @@
 <template>
   <section class="where-we-are">
     <div class="header">
-      <div class="section-number">02.</div>
+      <div class="section-number">03.</div>
       <h2 ref="titleRef" class="title fade-in"><span class="underline-text">Our Global Footprint</span> </h2>
       <p ref="typedSubtitle" class="subtitle typewriter-text"></p>
     </div>
@@ -55,7 +55,7 @@ export default {
 
 <style scoped>
 .where-we-are {
-  background-color: #111;
+  background-color: #201f1f;
   color: white;
   text-align: center;
   padding: 4rem 2rem;
@@ -117,7 +117,7 @@ export default {
   left: 0;
   width: 100%;
   height: 80%;
-  background-image: url('@/assets/cartebizxo.png');
+  background-image: url('@/assets/Bizservices.png');
   background-size: cover;
   background-position: center;
   animation: driftZoom 8s ease-in-out infinite alternate;

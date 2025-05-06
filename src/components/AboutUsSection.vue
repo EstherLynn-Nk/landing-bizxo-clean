@@ -1,6 +1,6 @@
 <template>
   <section class="about-section">
-    <div class="section-number">04.</div>
+    <div class="section-number">02.</div>
     <!-- MOT À LA FOIS -->
     <div class="word-zone">
       <transition name="fade-word" mode="out-in">
@@ -22,12 +22,7 @@
           We understand that every organization has unique needs, and our tailored approach ensures you receive the precise support necessary
           to achieve your goals and reap the benefits for your organization.
         </p>
-        <div class="hourglass-wrapper">
-  <div class="hourglass"></div>
-  <p class="coming-text">
-    Our website is under construction — the full BizXO experience is coming soon.
-  </p>
-</div>
+     
 
       
       </div>
@@ -41,11 +36,10 @@ export default {
   data() {
     return {
       words: [
-        "Integrity",
-        "Innovation",
-        "Clarity",
-        "Expertise",
+        "Flexibility",
         "Leadership",
+        "Expertise",
+        "Cost Efficiency",
         "Trust"
       ],
       currentIndex: 0
@@ -66,7 +60,7 @@ export default {
 
 <style scoped>
 .about-section {
-  background-color: #000;
+  background-color: rgb(41, 40, 40);
   color: white;
   text-align: center;
   padding: 6rem 2rem;

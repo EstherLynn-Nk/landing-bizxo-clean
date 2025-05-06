@@ -47,7 +47,7 @@ export default {
           description: 'Our Fractional General Managers are seasoned executives who provide strategic leadership and operational excellence to guide organizations through transitions and growth. Whether for interim needs or ongoing support, they help navigate challenges and drive sustainable success.'
         },
         {
-          title: 'Board Advisory Governance',
+          title: 'Board Advisory and Governance',
           image: boardImage,
           tag: 'Governance',
           description: 'We provide independent board advisory and strategic oversight to help companies strengthen governance, manage risk, and scale with confidence. Our seasoned experts bring deep experience in compliance, corporate strategy, and investor relations to support sustainable growth.'

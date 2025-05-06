@@ -23,9 +23,9 @@
       const navItems = [
         { id: "home", label: "Home" },
         { id: "services", label: "Services" },
+        { id: "about", label: "About" },
         { id: "location", label: "Where We Are" },
-        { id: "contact", label: "Contact" },
-        { id: "about", label: "About" }
+        { id: "contact", label: "Contact" }
       ];
   
       const activeSection = ref("home");
@@ -79,7 +79,7 @@
     height: 2px;
     border: none;
     
-    background-color: #aaa;
+    background-color: #363333;
     position: relative;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
