@@ -38,7 +38,6 @@ export default {
 };
 
 </script>
-
 <style scoped>
 * {
   margin: 0;
@@ -46,23 +45,10 @@ export default {
   box-sizing: border-box;
 }
 
-.right-align {
-  position: absolute;
-  right: 2rem;
-  bottom: 2rem;
-  text-align: right;
-  max-width: 90%;
-}
-
-
-
-
 .hero {
   position: relative;
   width: 100vw;
   height: 100dvh;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -71,15 +57,15 @@ export default {
 }
 
 .hero-video {
-  top:0;
-  left:0;
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
   z-index: 0;
   opacity: 0.6;
-  filter: grayscale(100%) ;
+  filter: grayscale(100%);
 }
 
 .hero-content {
@@ -87,27 +73,18 @@ export default {
   z-index: 1;
   text-align: center;
   color: white;
-  padding: 0 20px;
+  padding: 0 1.2rem;
+  width: 100%;
+  max-width: 100%;
 }
-/* 
-.hero-content h1 {
-  font-size: 2.8rem;
-  font-weight: bold;
-  color: #ffffff;
-  margin-bottom: 15px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-} */
 
-
-
-
-  .hero-logo {
-  font-size: clamp(4rem, 12vw, 10rem) !important;
+/* Logo responsive */
+.hero-logo {
+  font-size: clamp(3rem, 10vw, 6rem);
   font-weight: 900;
   color: #ffffff;
-  letter-spacing: 0.25rem;
-  display: inline-block;
-  margin-bottom: 1.5rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
   line-height: 1.1;
 }
 
@@ -117,14 +94,6 @@ export default {
   transform: none;
 }
 
-
-/* .hero-logo span {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: logoFadeIn 0.6s forwards;
-} */
-
 .hero-logo span:nth-child(1) { animation-delay: 0.2s; }
 .hero-logo span:nth-child(2) { animation-delay: 0.4s; }
 .hero-logo span:nth-child(3) { animation-delay: 0.6s; }
@@ -132,7 +101,7 @@ export default {
 .hero-logo span:nth-child(5) { animation-delay: 1s; }
 
 .hero-slogan {
-  font-size: 2.3rem;
+  font-size: clamp(1rem, 5vw, 2rem);
   font-weight: bold;
   color: #cccccc;
   opacity: 0;
@@ -141,21 +110,12 @@ export default {
   margin-bottom: 2rem;
 }
 
-@keyframes logoFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Animations */
 @keyframes fadeInSlogan {
   to {
     opacity: 1;
   }
 }
-
-/* modifications performances */
-
 
 .hero-logo.after-load {
   animation: pulse 1.8s ease-in-out;
@@ -167,21 +127,25 @@ export default {
   100% { transform: scale(1); }
 }
 
+/* Mobile-specific adjustments */
+@media screen and (max-width: 480px) {
+  .hero {
+    align-items: flex-start;
+    padding-top: 20vh;
+  }
 
+  .hero-slogan {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
 
+  .hero-logo {
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+  }
 
+  .hero-content {
+    padding: 0 1rem;
+  }
+}
 </style>
-
-<!-- 
-   <template>
-    <div style="background-color: pink; padding: 50px;">
-      <h1>TEST HERO SECTION</h1>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'HeroSection'
-  };
-  </script> -->
-  <!-- good job -->

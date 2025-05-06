@@ -2,7 +2,9 @@
   <section class="where-we-are">
     <div class="header">
       <div class="section-number">03.</div>
-      <h2 ref="titleRef" class="title fade-in"><span class="underline-text">Our Global Footprint</span> </h2>
+      <h2 ref="titleRef" class="title fade-in">
+        <span class="underline-text">Our Global Footprint</span>
+      </h2>
       <p ref="typedSubtitle" class="subtitle typewriter-text"></p>
     </div>
 
@@ -20,7 +22,8 @@ export default {
   setup() {
     const titleRef = ref(null);
     const typedSubtitle = ref(null);
-    const subtitleText = "BizXO supports global leadership and transformation initiatives across diverse strategic regions.";
+    const subtitleText =
+      "BizXO supports global leadership and transformation initiatives across diverse strategic regions.";
     let hasTyped = false;
 
     const typeWriter = () => {
@@ -35,13 +38,16 @@ export default {
     };
 
     onMounted(() => {
-      const observer = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting && !hasTyped) {
-          titleRef.value.classList.add("visible");
-          setTimeout(typeWriter, 600); // lancer le typewriter après le fade-in
-          hasTyped = true;
-        }
-      }, { threshold: 0.6 });
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting && !hasTyped) {
+            titleRef.value.classList.add("visible");
+            setTimeout(typeWriter, 600);
+            hasTyped = true;
+          }
+        },
+        { threshold: 0.6 }
+      );
 
       if (titleRef.value) {
         observer.observe(titleRef.value);
@@ -69,7 +75,14 @@ export default {
   padding: 0 1rem;
 }
 
-/* Fade-in Titre */
+.section-number {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #e9dfdf;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
 .title {
   font-size: 3rem;
   font-weight: bold;
@@ -79,29 +92,32 @@ export default {
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
 .title.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Typewriter Subtitle */
 .subtitle {
   font-size: 1.2rem;
   color: #cccccc;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid rgba(255,255,255,0.6);
+  border-right: 2px solid rgba(255, 255, 255, 0.6);
   width: fit-content;
   margin: 0 auto;
   animation: blink-caret 0.8s step-end infinite;
 }
 
 @keyframes blink-caret {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: rgba(255,255,255,0.6); }
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
 }
 
-/* Carte animée */
 .map-wrapper {
   width: 100%;
   height: 100vh;
@@ -132,22 +148,6 @@ export default {
     transform: scale(1.08) translateY(-20px);
   }
 }
-/* Titre avec underline stylisée */
-.with-underline {
-  font-size: 3rem;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 1rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  position: relative;
-}
-
-.with-underline.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 .underline-text {
   position: relative;
@@ -168,15 +168,54 @@ export default {
 }
 
 @keyframes underline-shine {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-.section-number {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #e9dfdf;
-  margin-bottom: 0.5rem;
-  letter-spacing: 1px;
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
+/* 🎯 Responsive Design */
+@media screen and (max-width: 768px) {
+  .where-we-are {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    white-space: normal;
+    overflow: visible;
+    border-right: none;
+    animation: none;
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .map-wrapper {
+    height: 60vh;
+    border-radius: 8px;
+  }
+
+  .map-image {
+    height: 100%;
+    background-position: center center;
+  }
+
+  .underline-text::after {
+    height: 2px;
+    bottom: -5px;
+    width: 50%;
+  }
+
+  .section-number {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+}
 </style>

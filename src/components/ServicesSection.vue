@@ -22,7 +22,6 @@
       >
         <div class="service-image-wrapper">
           <img :src="service.image" :alt="service.title" class="service-image" />
-
         </div>
         <h3 class="service-title">{{ service.title }}</h3>
         <p class="service-description">{{ service.description }}</p>
@@ -30,6 +29,7 @@
     </div>
   </section>
 </template>
+
 <script>
 import generalImage from '@/assets/GeneralManagement.jpg';
 import boardImage from '@/assets/BoardAdvisory.jpg';
@@ -44,19 +44,22 @@ export default {
           title: 'General Management',
           image: generalImage,
           tag: 'Leadership',
-          description: 'Our Fractional General Managers are seasoned executives who provide strategic leadership and operational excellence to guide organizations through transitions and growth. Whether for interim needs or ongoing support, they help navigate challenges and drive sustainable success.'
+          description:
+            'Our Fractional General Managers are seasoned executives who provide strategic leadership and operational excellence to guide organizations through transitions and growth. Whether for interim needs or ongoing support, they help navigate challenges and drive sustainable success.'
         },
         {
           title: 'Board Advisory and Governance',
           image: boardImage,
           tag: 'Governance',
-          description: 'We provide independent board advisory and strategic oversight to help companies strengthen governance, manage risk, and scale with confidence. Our seasoned experts bring deep experience in compliance, corporate strategy, and investor relations to support sustainable growth.'
+          description:
+            'We provide independent board advisory and strategic oversight to help companies strengthen governance, manage risk, and scale with confidence. Our seasoned experts bring deep experience in compliance, corporate strategy, and investor relations to support sustainable growth.'
         },
         {
           title: 'Information Management',
           image: infoImage,
           tag: 'Clarity',
-          description: 'In today’s digital age, having the right strategy to manage information assets. Our fractional CIO and CISO services provide you with experienced IT leadership to drive innovation, optimize technology investments, and enhance your capabilities without the cost of a full-time executive.'
+          description:
+            'In today’s digital age, having the right strategy to manage information assets. Our fractional CIO and CISO services provide you with experienced IT leadership to drive innovation, optimize technology investments, and enhance your capabilities without the cost of a full-time executive.'
         }
       ]
     };
@@ -85,6 +88,7 @@ export default {
   }
 };
 </script>
+
 <style scoped>
 .services-section {
   background: linear-gradient(-45deg, #111, #333, #111);
@@ -98,9 +102,15 @@ export default {
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .section-number {
@@ -127,8 +137,12 @@ export default {
 }
 
 @keyframes growLine {
-  from { width: 0; }
-  to { width: 80px; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
 }
 
 .intro-text {
@@ -150,8 +164,13 @@ export default {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
 }
 
 .cta-arrow {
@@ -165,8 +184,13 @@ export default {
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
 }
 
 .services-grid {
@@ -178,7 +202,7 @@ export default {
 }
 
 .service-card {
-  background-color: #f3f0ed;;
+  background-color: #f3f0ed;
   border-radius: 1rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   padding: 2rem;
@@ -218,8 +242,6 @@ export default {
   transform: scale(1.05);
 }
 
-
-
 .service-title {
   font-size: 1.4rem;
   font-weight: bold;
@@ -232,6 +254,52 @@ export default {
 }
 
 @keyframes fadeIn {
-  to { opacity: 1; transform: translateY(0); }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🎯 Responsive styles */
+@media screen and (max-width: 768px) {
+  .services-section {
+    padding: 3rem 1rem;
+  }
+
+  .intro-title {
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .cta-arrow {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    margin-top: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    max-width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .service-title {
+    font-size: 1.2rem;
+  }
+
+  .service-description {
+    font-size: 0.95rem;
+  }
+
+  .service-image {
+    height: 160px;
+  }
 }
 </style>

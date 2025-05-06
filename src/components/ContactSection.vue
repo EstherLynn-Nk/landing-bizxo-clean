@@ -344,4 +344,61 @@ button:disabled {
   color: #000000;
 }
 
+@media screen and (max-width: 768px) {
+  .contact-modern-section {
+    padding: 4rem 1rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .step-indicator {
+    gap: 0.5rem;
+  }
+
+  .step-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .step-box {
+    padding: 1.5rem 1rem;
+  }
+
+  input,
+  textarea {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .coming-text {
+    font-size: 1rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .hourglass-wrapper {
+    height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .hourglass {
+    width: 24px;
+    height: 50px;
+  }
+}
+
+
 </style>

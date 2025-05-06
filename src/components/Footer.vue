@@ -59,5 +59,33 @@
   font-size: 12px;
   color: #999;
 }
+@media screen and (max-width: 768px) {
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .footer-links a {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .footer-socials {
+    margin-bottom: 15px;
+  }
+
+  .footer-socials a {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}
+
 </style>
   

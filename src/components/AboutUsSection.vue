@@ -1,6 +1,7 @@
 <template>
   <section class="about-section">
     <div class="section-number">02.</div>
+
     <!-- MOT À LA FOIS -->
     <div class="word-zone">
       <transition name="fade-word" mode="out-in">
@@ -22,9 +23,6 @@
           We understand that every organization has unique needs, and our tailored approach ensures you receive the precise support necessary
           to achieve your goals and reap the benefits for your organization.
         </p>
-     
-
-      
       </div>
     </div>
   </section>
@@ -69,6 +67,13 @@ export default {
   align-items: center;
 }
 
+.section-number {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 1s ease forwards;
+}
+
 .word-zone {
   height: 120px;
   display: flex;
@@ -97,6 +102,7 @@ export default {
 .overview-section {
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .overview-title {
@@ -112,73 +118,32 @@ export default {
   color: #ddd;
   text-align: center;
 }
-.hourglass-wrapper {
-  background: #000;
-  color: white;
-  text-align: center;
-  padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
 
-.coming-text {
-  margin-top: 2rem;
-  font-size: 1.2rem;
-  max-width: 600px;
-  line-height: 1.6;
-  color: #e0e0e0;
-}
-
-/* SABLIER */
-.hourglass {
-  width: 40px;
-  height: 60px;
-  border: 4px solid #e0cba8;
-  border-radius: 4px;
-  position: relative;
-  animation: flip 2s infinite ease-in-out;
-  box-sizing: border-box;
-}
-
-.hourglass::before,
-.hourglass::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  border-style: solid;
-  border-color: #e0cba8 transparent;
-}
-
-.hourglass::before {
-  top: 8px;
-  border-width: 12px 10px 0 10px;
-}
-
-.hourglass::after {
-  bottom: 8px;
-  border-width: 0 10px 12px 10px;
-}
-
-@keyframes flip {
-  0% {
-    transform: rotate(0);
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .about-section {
+    padding: 4rem 1rem;
   }
-  50% {
-    transform: rotate(180deg);
+
+  .word-zone {
+    height: auto;
+    margin-bottom: 2rem;
   }
-  100% {
-    transform: rotate(360deg);
+
+  .value-word {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+
+  .overview-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .overview-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
   }
 }
-.section-number {
-  font-size: 1.2rem;
-  color: #aaa;
-  margin-bottom: 0.5rem;
-  animation: fadeIn 1s ease forwards;
-}
-
 </style>

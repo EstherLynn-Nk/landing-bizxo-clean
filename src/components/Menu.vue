@@ -115,6 +115,31 @@
   opacity: 1;
   transform: translateY(-50%) translateX(-10px);
 }
+@media screen and (max-width: 768px) {
+  .dot-nav {
+    left: 0.8rem;
+  }
+
+  .dot-nav ul {
+    gap: 1rem;
+  }
+
+  .dot-nav button {
+    width: 8px;
+    height: 2px;
+  }
+
+  .tooltip {
+    font-size: 0.6rem;
+    padding: 4px 8px;
+    left: 120%;
+  }
+
+  .dot-nav button:hover .tooltip {
+    transform: translateY(-50%) translateX(-6px);
+  }
+}
+
 
   </style>
   
