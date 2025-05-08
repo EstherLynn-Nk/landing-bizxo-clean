@@ -1,10 +1,13 @@
 <template>
     <footer class="bizxo-footer">
       <div class="footer-links">
-        <router-link to="/">Home</router-link>
-        <router-link to="/services">Services</router-link>
-        <router-link to="/contact">Contact</router-link>
-        <router-link to="/where-we-are">Where we are</router-link>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#location">Global Footprint</a>
+        <a href="#contact">Contact</a>
+       
+      
       </div>
   
       <div class="footer-socials">

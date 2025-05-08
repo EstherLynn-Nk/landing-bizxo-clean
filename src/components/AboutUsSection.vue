@@ -16,12 +16,8 @@
       <div class="overview-content">
         <h2 class="overview-title">About BizXO</h2>
         <p class="overview-text">
-          Bizxo Services provides high-quality expertise on an “as-needed” basis to help tech organizations transform and thrive.
-          Our team of seasoned technology leaders brings a wealth of knowledge and experience to deliver strategic and tactical solutions in
-          General Management, Change Management, Project/Program Oversight, Information Management, Compliance Management,
-          Board governance, and Engagement Management.
-          We understand that every organization has unique needs, and our tailored approach ensures you receive the precise support necessary
-          to achieve your goals and reap the benefits for your organization.
+          Bizxo Services offers executive-level expertise on an "as-needed " basis to help technology organizations grow, evolve, and succeed. Our team of seasoned technology leaders delivers strategic and hands-on solutions in General Management, Information Management, and Corporate Governance.
+          We recognize that every organization is unique. That’s why we tailor our approach to provide the support you need, ensuring measurable results, target benefits, and long-term value
         </p>
       </div>
     </div>
