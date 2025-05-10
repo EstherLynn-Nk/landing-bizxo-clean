@@ -31,9 +31,9 @@
 </template>
 
 <script>
-import generalImage from '@/assets/GeneralManagement.jpg';
-import boardImage from '@/assets/BoardAdvisory.jpg';
-import infoImage from '@/assets/InformationManagement.jpg';
+import generalImage from '@/assets/GM.jpg';
+import boardImage from '@/assets/BM.jpg';
+import infoImage from '@/assets/IM.jpg';
 
 export default {
   name: 'ServicesSection',

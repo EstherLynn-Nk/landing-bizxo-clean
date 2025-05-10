@@ -23,7 +23,7 @@ export default {
     const titleRef = ref(null);
     const typedSubtitle = ref(null);
     const subtitleText =
-      "BizXO supports global leadership and transformation initiatives across diverse strategic regions.";
+      "BizXO’s experts are located worldwide, ready to support your business wherever you operate.";
     let hasTyped = false;
 
     const typeWriter = () => {
@@ -133,7 +133,7 @@ export default {
   left: 0;
   width: 100%;
   height: 80%;
-  background-image: url('@/assets/Bizservices.png');
+  background-image: url('@/assets/Footprint.jpg');
   background-size: cover;
   background-position: center;
   animation: driftZoom 8s ease-in-out infinite alternate;
@@ -176,7 +176,7 @@ export default {
   }
 }
 
-/* 🎯 Responsive Design */
+/*  Responsive Design */
 @media screen and (max-width: 768px) {
   .where-we-are {
     padding: 3rem 1rem;
