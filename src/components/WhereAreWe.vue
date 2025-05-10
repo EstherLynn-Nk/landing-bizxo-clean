@@ -172,7 +172,6 @@ export default {
   z-index: 1;
 }
 
-/* Corrige le débordement */
 .leaflet-container {
   background: transparent !important;
   margin: 0;
@@ -205,6 +204,7 @@ export default {
   text-transform: uppercase;
 }
 
+.pulse-marker:hover + .tooltip-label,
 .marker-wrapper:hover .tooltip-label {
   opacity: 1;
 }
@@ -216,6 +216,7 @@ export default {
   border-radius: 50%;
   box-shadow: 0 0 12px #e0cba8;
   animation: pulse 1.5s infinite ease-in-out;
+  cursor: pointer;
 }
 
 @keyframes pulse {
