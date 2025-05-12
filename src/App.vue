@@ -33,7 +33,7 @@ html, body, #app {
   width: 100%;
   height: calc(100vh - 60px); /* ou la hauteur réelle de ton header */
   margin: 0;
-  padding: 0;
+  padding-bottom: 5rem;
   position: relative;
   background-color: #000;
  
@@ -111,5 +111,10 @@ html, body, #app {
   margin: 0;
   padding-bottom: 2.5rem;
   font-size: 1.3rem;
+  padding-top: 2.5rem;
+}
+.section-number{
+  font-size: 1.2rem;
+  padding-top: 4rem;
 }
 </style>
