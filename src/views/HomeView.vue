@@ -99,7 +99,7 @@ export default {
       <AboutUsSection />
     </section>
 
-    <section id="location">
+    <section id="location" class="where-we-are">
       <WhereAreWe />
     </section>
 
