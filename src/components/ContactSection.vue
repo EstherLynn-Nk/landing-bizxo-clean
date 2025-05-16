@@ -286,4 +286,75 @@ button:disabled {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* SABLIER */
+.hourglass {
+  width: 30px;
+  height: 60px;
+  border: 4px solid #000000;
+  border-radius: 4px;
+  position: relative;
+  animation: flip 2s infinite ease-in-out;
+  box-sizing: border-box;
+}
+
+.hourglass::before,
+.hourglass::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-color: #000000 transparent;
+}
+
+.hourglass::before {
+  top: 8px;
+  border-width: 12px 10px 0 10px;
+}
+
+.hourglass::after {
+  bottom: 8px;
+  border-width: 0 10px 12px 10px;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.section-number {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 1s ease forwards;
+}
+
+.hourglass-wrapper {
+
+  color: white;
+  text-align: center;
+  
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 60vh;
+  padding-bottom: 3rem;
+}
+
+.coming-text {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+  color: #000000;
+}
 </style>

@@ -11,51 +11,40 @@ const PORT = 5000
 app.use(cors())
 app.use(express.json())
 
+// Route POST pour traiter les messages du formulaire
 app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body
 
-  // Vérification basique
   if (!name || !email || !message) {
     return res.status(400).json({ success: false, error: 'Champs manquants' })
   }
 
-  // Création du transporteur SMTP
+  // Transporteur SMTP pour Hostinger / GoDaddy / IONOS, etc.
   const transporter = nodemailer.createTransport({
-    service: 'gmail', // ou 'outlook', 'mailjet', 'sendinblue'
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT),
+    secure: process.env.SMTP_SECURE === 'true', // true si port 465, false si 587
     auth: {
       user: process.env.SMTP_USER, // noreply@mybizxo.com
-      pass: process.env.SMTP_PASS  // mot de passe application
+      pass: process.env.SMTP_PASS  // mot de passe de la boîte noreply
     }
   })
 
   try {
-    // 1️⃣ Email vers l'équipe BizXO
+    // 1️⃣ Envoi du message à l'équipe BizXO
     await transporter.sendMail({
-      from: email,
+      from: `"BizXO Form" <${process.env.SMTP_USER}>`,
       to: 'ginette@mybizxo.com',
       subject: `📬 Nouveau message de ${name}`,
-      text: `
-Nom : ${name}
-Email : ${email}
-Message :
-${message}
-      `
+      text: `Nom : ${name}\nEmail : ${email}\n\nMessage :\n${message}`
     })
 
-    // 2️⃣ Email de confirmation vers le client
+    // 2️⃣ Accusé de réception envoyé au client
     await transporter.sendMail({
-      from: process.env.SMTP_USER,
+      from: `"BizXO" <${process.env.SMTP_USER}>`,
       to: email,
-      subject: "🧾 Confirmation - Nous avons bien reçu votre message",
-      text: `Bonjour ${name},
-
-Nous avons bien reçu votre message :
-"${message}"
-
-L’équipe BizXO vous répondra sous peu.
-
-Cordialement,
-BizXO Team`
+      subject: "🧾 Confirmation - Votre message a bien été reçu",
+      text: `Bonjour ${name},\n\nNous avons bien reçu votre message :\n\n"${message}"\n\nNotre équipe vous contactera sous peu.\n\n— L’équipe BizXO`
     })
 
     res.status(200).json({ success: true })
