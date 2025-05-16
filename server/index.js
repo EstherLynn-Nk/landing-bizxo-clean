@@ -35,7 +35,7 @@ app.post('/api/contact', async (req, res) => {
     await transporter.sendMail({
       from: `"BizXO Form" <${process.env.SMTP_USER}>`,
       to: 'ginette@mybizxo.com',
-      subject: `📬 Nouveau message de ${name}`,
+      subject: `📬 New message from:  ${name}`,
       text: `Nom : ${name}\nEmail : ${email}\n\nMessage :\n${message}`
     })
 
@@ -43,8 +43,8 @@ app.post('/api/contact', async (req, res) => {
     await transporter.sendMail({
       from: `"BizXO" <${process.env.SMTP_USER}>`,
       to: email,
-      subject: "🧾 Confirmation - Votre message a bien été reçu",
-      text: `Bonjour ${name},\n\nNous avons bien reçu votre message :\n\n"${message}"\n\nNotre équipe vous contactera sous peu.\n\n— L’équipe BizXO`
+      subject: "🧾 Confirmation – Your message has been successfully received",
+      text: `Hello ${name},\n\nWe have received your message :\n\n"${message}"\n\nOur team will get back to you shortly.\n\n—The BizXO Team`
     })
 
     res.status(200).json({ success: true })
