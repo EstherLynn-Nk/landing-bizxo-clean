@@ -8,9 +8,8 @@
       </div>
   
       <div class="footer-socials">
-        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/ginettebebeung/" target="_blank" rel="https://www.linkedin.com/in/ginettebebeung/"><i class="fab fa-linkedin-in"></i></a>
+       
       </div>
   
       <div class="footer-copy">

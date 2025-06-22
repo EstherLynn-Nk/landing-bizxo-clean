@@ -89,6 +89,9 @@ export default {
     <section id="services">
       <ServicesSection />
     </section>
+    <section id="about">
+      <AboutUsSection />
+    </section>
 
     <section id="location">
       <WhereAreWe />
@@ -97,10 +100,7 @@ export default {
     <section id="contact">
       <ContactSection />
     </section>
-    <section id="about">
-      <AboutUsSection />
-    </section>
-
+   
     <Footer/>
 
     <Menu/>

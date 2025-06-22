@@ -132,7 +132,8 @@ export default {
 .hero-logo span:nth-child(5) { animation-delay: 1s; }
 
 .hero-slogan {
-  font-size: 1.3rem;
+  font-size: 2.3rem;
+  font-weight: bold;
   color: #cccccc;
   opacity: 0;
   animation: fadeInSlogan 1s forwards;

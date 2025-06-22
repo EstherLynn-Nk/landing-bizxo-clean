@@ -23,9 +23,9 @@
       const navItems = [
         { id: "home", label: "Home" },
         { id: "services", label: "Services" },
+        { id: "about", label: "About" },
         { id: "location", label: "Where We Are" },
-        { id: "contact", label: "Contact" },
-        { id: "about", label: "About" }
+        { id: "contact", label: "Contact" }
       ];
   
       const activeSection = ref("home");
@@ -75,6 +75,10 @@
     margin: 0;
   }
   .dot-nav button {
+    width: 11px;
+    height: 2px;
+    border: none;
+    
     background-color: #aaa;
     position: relative;
     border: none;
