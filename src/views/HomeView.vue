@@ -118,7 +118,7 @@ import Footer from '@/components/Footer.vue';
 import Menu from '@/components/Menu.vue';
 import MenuPage from '@/components/MenuPage.vue';
 import AboutUsSection from '@/components/AboutUsSection.vue';
-
+import AboutUsPage from '@/components/pages/AboutUsPage.vue';
 
 
 
@@ -132,10 +132,9 @@ export default {
     ContactSection,
     WhereAreWe,
     AboutUsSection,
-    Footer
-    
-    
-  },data() {
+    Footer 
+  }
+  ,data() {
     return {
       showOverlay: false
     };

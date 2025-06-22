@@ -1,5 +1,5 @@
 <template>
-  <section class="services-section" ref="section">
+  <section id="services" class="services-section" ref="section">
     <div class="intro-block">
       <div class="section-number">01.</div>
       <h2 class="intro-title">Our Services</h2>

@@ -57,8 +57,10 @@
     </div>
   </section>
 </template>
-
+ 
 <script>
+import axios from 'axios';
+
 export default {
   name: "Contact",
   data() {
@@ -68,7 +70,9 @@ export default {
         name: "",
         email: "",
         message: ""
-      }
+      },
+      message: "", //For succes/error messages
+      error: false, //Track error state
     };
   },
   computed: {
@@ -77,16 +81,41 @@ export default {
     }
   },
   methods: {
+
     nextStep() {
       if (this.step < 4) this.step++;
     },
     prevStep() {
       if (this.step > 1) this.step--;
     },
-    handleSubmit() {
-      console.log("Form submitted:", this.form);
-      this.step = 4;
+    async handleSubmit() {
+      
+      try {
+         const response = await fetch('https://localhost:3000/api/email',{
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(this.form)
+        });
+         
+         console.log(response.data.message);
+        if (response.status === 200) {
+          this.message = 'Email sent successfully!';
+          this.error = false;
+          this.step = 4;
+          this.form = { name: '', email: '', message: '' }; //reset the form or show a success message
+        } else {
+           this.message = `Error sending email: ${response.data.message || 'Something went wrong'}`;
+        }
+      } catch (error) {
+          console.error('Error sending email:', error);
+          // Handle error (e.g., display an error message)
+          this.message = error.response?.data?.message || 'Failed to send email';
+          this.error = true;
+        }
     }
+
   }
 };
 </script>
